@@ -1,0 +1,8 @@
+# This file may be used to create an environment:
+scikit-learn
+numpy
+pandas
+matplotlib
+dvc
+pyyaml
+scipy

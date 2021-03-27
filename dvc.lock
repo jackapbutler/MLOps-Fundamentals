@@ -1,0 +1,72 @@
+schema: '2.0'
+stages:
+  get_data:
+    cmd: python 02a_sklearn_getdata.py
+    deps:
+    - path: 02a_sklearn_getdata.py
+      md5: 068acc6f767a5220c01e6cb5c13847bd
+      size: 134
+    outs:
+    - path: ./data/diabetes.csv
+      md5: b43dd020fa775d93fced49f959c227ed
+      size: 23873
+  process_data:
+    cmd: python 02b_sklearn_processdata.py
+    deps:
+    - path: ./data/diabetes.csv
+      md5: b43dd020fa775d93fced49f959c227ed
+      size: 23873
+    - path: 02b_sklearn_processdata.py
+      md5: 78af5037402d7173e2d062ce628b9069
+      size: 117
+    outs:
+    - path: ./data/processed_data.csv
+      md5: 60acca81995dc9744b499005ecfe6f2a
+      size: 24059
+  train_model:
+    cmd: python 02c_sklearn_train.py
+    deps:
+    - path: ./data/processed_data.csv
+      md5: 60acca81995dc9744b499005ecfe6f2a
+      size: 24059
+    - path: ./experiments/params.yaml
+      md5: ebb8c13af8a7a390e402ca48c6eb4f4c
+      size: 42
+    - path: 02c_sklearn_train.py
+      md5: 9e934c837b3245e1e20e9eb8d48764c2
+      size: 1418
+    outs:
+    - path: ./images/sklearn_mlp_loss_curve.png
+      md5: 23b6291990c37bd64f34e541b0877280
+      size: 24290
+    - path: ./metrics/train_metrics.json
+      md5: 7b9af93694da9433afee6f9a4306351a
+      size: 77
+    - path: ./models/sklearn_neuralnet.pkl
+      md5: 5d8099191317e067f00c557868f40545
+      size: 351954
+  evaluate:
+    cmd: python 02d_sklearn_evaluate.py
+    deps:
+    - path: 02d_sklearn_evaluate.py
+      md5: 6608ec2fad6760df92db2d366b988806
+      size: 1496
+    - path: data/processed_data.csv
+      md5: 60acca81995dc9744b499005ecfe6f2a
+      size: 24059
+    - path: models/sklearn_neuralnet.pkl
+      md5: 5d8099191317e067f00c557868f40545
+      size: 351954
+    outs:
+    - path: ./metrics/eval_prc.json
+      md5: 1453c4c56bd55bad42d17f657791a8ae
+      size: 119763
+    - path: ./metrics/eval_score.json
+      md5: 47c9082c1561e5be414c17265373cff0
+      size: 76
+  test_model:
+    cmd: python ./tests/test_fit.py
+    deps:
+    - path: models/sklearn_neuralnet.pkl
+      md5: 5d8099191317e067f00c557868f40545
+      size: 351954

@@ -1,0 +1,47 @@
+stages:
+
+  get_data:
+    cmd: python 02a_sklearn_getdata.py
+    deps:
+    - 02a_sklearn_getdata.py
+    outs:
+    - ./data/diabetes.csv
+    
+  process_data:
+    cmd: python 02b_sklearn_processdata.py
+    deps:
+    - 02b_sklearn_processdata.py
+    - ./data/diabetes.csv
+    outs:
+    - ./data/processed_data.csv
+
+  train_model:
+    cmd: python 02c_sklearn_train.py
+    deps:
+    - 02c_sklearn_train.py
+    - ./data/processed_data.csv
+    - ./experiments/params.yaml
+    outs:
+    - ./images/sklearn_mlp_loss_curve.png
+    - ./models/sklearn_neuralnet.pkl
+    metrics:
+    - ./metrics/train_metrics.json:
+        cache: false
+      
+  evaluate:
+    cmd: python 02d_sklearn_evaluate.py 
+    deps:
+    - data/processed_data.csv
+    - models/sklearn_neuralnet.pkl
+    - 02d_sklearn_evaluate.py
+    metrics:
+    - ./metrics/eval_score.json:
+        cache: false
+    plots:
+    - ./metrics/eval_prc.json:
+        cache: false
+
+  test_model:
+    cmd: python ./tests/test_fit.py
+    deps:
+    - models/sklearn_neuralnet.pkl

@@ -1,0 +1,28 @@
+name: dvc-pipeline
+on: [push]
+jobs:
+  run:
+    runs-on: [ubuntu-latest]
+    container: docker://dvcorg/cml-py3:latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: 'Executing model pipeline including Evaluation'
+        env:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+
+          # Install requirements and run full pipeline
+          pip install -r requirements.txt
+          dvc repro
+          git fetch --prune
+
+          # Add training loss chart
+          echo "## Neural Network Loss Overtime" >> report.md
+          cml-publish ./images/sklearn_mlp_loss_curve.png --md >> report.md
+          
+          # Show Comparison metrics
+          echo "## Basic Training Accuracy Metrics" >> report.md
+          cat ./metrics/train_metrics.json >> report.md
+          dvc metrics diff --show-md >> report.md
+
+          cml-send-comment report.md
