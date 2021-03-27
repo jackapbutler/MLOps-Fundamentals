@@ -6,3 +6,4 @@ matplotlib
 dvc
 pyyaml
 scipy
+wandb

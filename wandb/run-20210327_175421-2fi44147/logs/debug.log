@@ -1,0 +1,65 @@
+2021-03-27 17:54:21,035 INFO    MainThread:6696 [wandb_setup.py:_flush():69] setting env: {}
+2021-03-27 17:54:21,036 INFO    MainThread:6696 [wandb_setup.py:_flush():69] setting login settings: {}
+2021-03-27 17:54:21,036 INFO    MainThread:6696 [wandb_init.py:_log_setup():336] Logging user logs to C:\Users\jacka\Downloads\MLOps-Fundamentals\wandb\run-20210327_175421-2fi44147\logs\debug.log
+2021-03-27 17:54:21,036 INFO    MainThread:6696 [wandb_init.py:_log_setup():337] Logging internal logs to C:\Users\jacka\Downloads\MLOps-Fundamentals\wandb\run-20210327_175421-2fi44147\logs\debug-internal.log
+2021-03-27 17:54:21,037 INFO    MainThread:6696 [wandb_init.py:init():369] calling init triggers
+2021-03-27 17:54:21,037 INFO    MainThread:6696 [wandb_init.py:init():374] wandb.init called with sweep_config: {}
+config: {}
+2021-03-27 17:54:21,038 INFO    MainThread:6696 [wandb_init.py:init():389] re-initializing run, found existing run on stack: 1nfuj5xd
+2021-03-27 17:54:21,039 INFO    MainThread:6696 [wandb_run.py:finish():1166] finishing run jackapbutler/sklearn_wandb/1nfuj5xd
+2021-03-27 17:54:21,039 INFO    MainThread:6696 [wandb_run.py:_atexit_cleanup():1477] got exitcode: 0
+2021-03-27 17:54:21,040 INFO    MainThread:6696 [wandb_run.py:_restore():1449] restore
+2021-03-27 17:54:23,809 INFO    MainThread:6696 [wandb_run.py:_wait_for_finish():1599] got exit ret: file_counts {
+  media_count: 7
+}
+pusher_stats {
+  uploaded_bytes: 5715
+  total_bytes: 6496
+}
+
+2021-03-27 17:54:25,820 INFO    MainThread:6696 [wandb_run.py:_wait_for_finish():1599] got exit ret: done: true
+exit_result {
+}
+file_counts {
+  wandb_count: 5
+  media_count: 7
+}
+pusher_stats {
+  uploaded_bytes: 12929
+  total_bytes: 12929
+}
+
+2021-03-27 17:54:27,566 INFO    MainThread:6696 [wandb_run.py:_show_summary():1754] rendering summary
+2021-03-27 17:54:27,576 INFO    MainThread:6696 [wandb_run.py:_show_history():1792] rendering history
+2021-03-27 17:54:27,589 INFO    MainThread:6696 [wandb_run.py:_show_files():1821] logging synced files
+2021-03-27 17:54:27,601 INFO    MainThread:6696 [wandb_init.py:init():418] starting backend
+2021-03-27 17:54:27,601 INFO    MainThread:6696 [backend.py:_multiprocessing_setup():69] multiprocessing start_methods=spawn, using: spawn
+2021-03-27 17:54:27,616 INFO    MainThread:6696 [backend.py:ensure_launched():123] starting backend process...
+2021-03-27 17:54:27,902 INFO    MainThread:6696 [backend.py:ensure_launched():127] started backend process with pid: 11660
+2021-03-27 17:54:27,902 INFO    MainThread:6696 [wandb_init.py:init():423] backend started and connected
+2021-03-27 17:54:27,905 INFO    MainThread:6696 [wandb_init.py:init():463] updated telemetry
+2021-03-27 17:54:27,905 INFO    MainThread:6696 [wandb_init.py:init():482] communicating current version
+2021-03-27 17:54:29,937 INFO    MainThread:6696 [wandb_init.py:init():487] got version response 
+2021-03-27 17:54:29,937 INFO    MainThread:6696 [wandb_init.py:init():495] communicating run to backend with 30 second timeout
+2021-03-27 17:54:30,336 INFO    MainThread:6696 [wandb_init.py:init():520] starting run threads in backend
+2021-03-27 17:54:33,476 INFO    MainThread:6696 [wandb_run.py:_console_start():1507] atexit reg
+2021-03-27 17:54:33,479 INFO    MainThread:6696 [wandb_run.py:_redirect():1370] redirect: SettingsConsole.WRAP
+2021-03-27 17:54:33,479 INFO    MainThread:6696 [wandb_run.py:_redirect():1405] Wrapping output streams.
+2021-03-27 17:54:33,479 INFO    MainThread:6696 [wandb_run.py:_redirect():1421] Redirects installed.
+2021-03-27 17:54:33,479 INFO    MainThread:6696 [wandb_init.py:init():544] run started, returning control to user process
+2021-03-27 17:54:34,637 INFO    MainThread:6696 [wandb_run.py:_config_callback():748] config_cb ('_wandb', 'viz', 'learning_curve') {'id': 'wandb/learning_curve/v1', 'historyFieldSettings': {'key': 'learning_curve', 'x-axis': '_step'}} None
+2021-03-27 17:54:34,656 INFO    MainThread:6696 [wandb_run.py:_config_callback():748] config_cb ('_wandb', 'viz', 'confusion_matrix') {'id': 'wandb/confusion_matrix/v1', 'historyFieldSettings': {'key': 'confusion_matrix', 'x-axis': '_step'}} None
+2021-03-27 17:54:34,709 INFO    MainThread:6696 [wandb_run.py:_config_callback():748] config_cb ('_wandb', 'viz', 'summary_metrics') {'id': 'wandb/metrics/v1', 'historyFieldSettings': {'key': 'summary_metrics', 'x-axis': '_step'}} None
+2021-03-27 17:54:34,722 INFO    MainThread:6696 [wandb_run.py:_config_callback():748] config_cb ('_wandb', 'viz', 'class_proportions') {'id': 'wandb/class_proportions/v1', 'historyFieldSettings': {'key': 'class_proportions', 'x-axis': '_step'}} None
+2021-03-27 17:55:34,729 INFO    MainThread:6696 [wandb_run.py:_config_callback():748] config_cb ('_wandb', 'viz', 'calibration_curve') {'id': 'wandb/calibration/v1', 'historyFieldSettings': {'key': 'calibration_curve', 'x-axis': '_step'}} None
+2021-03-27 17:55:34,779 INFO    MainThread:6696 [wandb_run.py:_config_callback():748] config_cb ('_wandb', 'viz', 'roc') {'id': 'wandb/roc/v1', 'historyFieldSettings': {'key': 'roc', 'x-axis': '_step'}} None
+2021-03-27 17:55:34,821 INFO    MainThread:6696 [wandb_run.py:_config_callback():748] config_cb ('_wandb', 'viz', 'precision_recall') {'id': 'wandb/pr_curve/v1', 'historyFieldSettings': {'key': 'precision_recall', 'x-axis': '_step'}} None
+2021-03-27 17:55:34,992 INFO    MainThread:6696 [wandb_setup.py:_flush():69] setting env: {}
+2021-03-27 17:55:34,992 INFO    MainThread:6696 [wandb_setup.py:_flush():69] setting login settings: {}
+2021-03-27 17:55:34,993 INFO    MainThread:6696 [wandb_init.py:_log_setup():336] Logging user logs to C:\Users\jacka\Downloads\MLOps-Fundamentals\wandb\run-20210327_175534-2jphlswf\logs\debug.log
+2021-03-27 17:55:34,993 INFO    MainThread:6696 [wandb_init.py:_log_setup():337] Logging internal logs to C:\Users\jacka\Downloads\MLOps-Fundamentals\wandb\run-20210327_175534-2jphlswf\logs\debug-internal.log
+2021-03-27 17:55:34,993 INFO    MainThread:6696 [wandb_init.py:init():369] calling init triggers
+2021-03-27 17:55:34,994 INFO    MainThread:6696 [wandb_init.py:init():374] wandb.init called with sweep_config: {}
+config: {}
+2021-03-27 17:55:34,994 INFO    MainThread:6696 [wandb_init.py:init():389] re-initializing run, found existing run on stack: 2fi44147
+2021-03-27 17:55:34,995 INFO    MainThread:6696 [wandb_run.py:finish():1166] finishing run jackapbutler/sklearn_wandb/2fi44147

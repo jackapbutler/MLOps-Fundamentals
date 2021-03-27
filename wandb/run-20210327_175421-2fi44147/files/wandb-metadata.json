@@ -1,0 +1,22 @@
+{
+    "os": "Windows-10-10.0.19041-SP0",
+    "python": "3.8.8",
+    "heartbeatAt": "2021-03-27T17:54:33.323798",
+    "startedAt": "2021-03-27T17:54:21.029877",
+    "docker": null,
+    "cpu_count": 4,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "03a_wandb_sklearn.py",
+    "codePath": "03a_wandb_sklearn.py",
+    "git": {
+        "remote": "https://github.com/jackapbutler/MLOps-Fundamentals.git",
+        "commit": "f766cf536d5be0b5ff8ea834bbef3b79f684e21f"
+    },
+    "email": "47942453+jackapbutler@users.noreply.github.com",
+    "root": "C:/Users/jacka/Downloads/MLOps-Fundamentals",
+    "host": "LAPTOP-UCA4G8MG",
+    "username": "jacka",
+    "executable": "C:\\Users\\jacka\\Anaconda3\\envs\\tensor_env\\python.exe"
+}

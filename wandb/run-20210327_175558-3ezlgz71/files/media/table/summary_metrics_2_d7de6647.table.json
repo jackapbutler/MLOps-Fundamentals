@@ -1,0 +1,1 @@
+{"columns": ["metric_name", "metric_value", "model_name"], "data": [["accuracy_score", 0.77, "KNeighborsClassifier"], ["precision", 0.76, "KNeighborsClassifier"], ["recall", 0.77, "KNeighborsClassifier"], ["f1_score", 0.76, "KNeighborsClassifier"]]}

@@ -1,0 +1,1 @@
+{"columns": ["metric_name", "metric_value", "model_name"], "data": [["accuracy_score", 0.73, "AdaBoostClassifier"], ["precision", 0.72, "AdaBoostClassifier"], ["recall", 0.73, "AdaBoostClassifier"], ["f1_score", 0.71, "AdaBoostClassifier"]]}

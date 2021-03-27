@@ -10,3 +10,5 @@
 - It also executes ./tests/test_fit.py for basic unit tests, etc.
 
 ## WandB
+- Running model_algorithm() in 03a_wandb.. will fit the classifier and display the performance on WandB.
+- You must do this for each individual model you want to add to the comparisons.
