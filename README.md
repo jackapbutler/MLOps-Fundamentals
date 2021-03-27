@@ -1,5 +1,5 @@
 # MLOps Fundamentals
-## Sklearn's MLP and DVC MLOps Workflow
+## DVC and WandB MLOps Workflow
 - Used Sklearn's MLPClassifier to perform classification on a diabetes dataset.
 
 ### When a push is made to a new branch the following occurs:
