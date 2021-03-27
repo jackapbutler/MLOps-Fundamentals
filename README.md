@@ -12,3 +12,4 @@
 ## WandB
 - Running model_algorithm() in 03a_wandb.. will fit the classifier and display the performance on WandB.
 - You must do this for each individual model you want to add to the comparisons.
+- You can use Sweep for further hyperparameter tuning once the algorithm is chosen.
