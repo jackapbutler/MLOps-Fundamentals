@@ -4,9 +4,9 @@
 
 ## DVC
 ### When a push is made to a new branch the following occurs:
-- Automate the unit testing on a dummy dataset with a certain number of features.
-- Automate a pipeline for getting data, processing data, training a model and storing metrics.
-- Automated the generation of reports and accuracy statistics using CML and GitHub Actions.
-- Automated performing experiments with different parameters and visualising results.
+- Runs <b>dvc.yaml</b> to execute all four 02_ scikit-learn scripts.
+- DVC syncs with GitHub Actions to generate a report (.github\workflows\dvc_report.yaml).
+- This pipeline collects data, processes data, trains the model (as per params.yaml) and outputs metrics.
+- It also executes ./tests/test_fit.py for basic unit tests, etc.
 
 ## WandB
