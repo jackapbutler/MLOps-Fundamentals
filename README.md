@@ -1,5 +1,4 @@
 # MLOps Fundamentals
-## DVC and WandB MLOps Workflow
 - Used Sklearn's MLPClassifier to perform classification on a diabetes dataset.
 
 ## DVC
